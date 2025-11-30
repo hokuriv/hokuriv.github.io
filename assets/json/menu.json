@@ -1,0 +1,11 @@
+[
+  { "title": "ホーム", "link": "https://hokuriv.github.io/" },
+  { "title": "お知らせ", "link": "https://hokuriv.github.io/news/" },
+  { "title": "県から選ぶ", "link": "https://hokuriv.github.io/pref/" },
+  { "title": "自治体から選ぶ", "link": "https://hokuriv.github.io/municipality/" },
+  { "title": "河川から選ぶ", "link": "https://hokuriv.github.io/river/" },
+  { "title": "提供", "link": "https://hokuriv.github.io/offer/" },
+  { "title": "リンク集", "link": "https://hokuriv.github.io/link/" },
+  { "title": "お問い合わせ", "link": "https://hokuriv.github.io/support/" },
+  { "title": "鉄道モバイル", "link": "https://www.te2do.jp/" }
+]
