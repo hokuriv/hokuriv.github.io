@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="北陸地区の河川をまとめたページです。">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:title" content="ほくりく河川図鑑">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ほくりく河川図鑑">
+  <meta property="og:locale" content="ja_JP">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ほくりく河川図鑑">
+  <meta name="twitter:description" content="北陸地区の河川をまとめたページです。">
+
+  <title>ほくりく河川図鑑 | ホーム</title>
+  <link rel="stylesheet" href="https://hokuriv.github.io/assets/css/common.css">
+  <link rel="icon" href="https://hokuriv.github.io/assets/img/riv/toyama_jinzu.png">
+</head>
+<body>
+  <header>
+    <h1><a href="https://hokuriv.github.io/" style="color: white;"><img src="https://hokuriv.github.io/assets/img/riv/toyama_jinzu.png" alt="鉄道車両画像"> ほくりく河川図鑑</a></h1>
+  </header>
+
+  <div class="container">
+    <aside id="menu"></aside>
+
+    <main id="content">
+      <section>
+        <h2>概要</h2>
+        <p>このサイトは、北陸地区の河川をまとめたページです。</p>
+      </section>
+      <div class="spacer"></div>
+      <section>
+        <h2>写真</h2>
+        <p>現在写真が不足しています。提供をお願いいたします。</p>
+        <a href="https://forms.gle/iGUxiCi1Q9uHKSV5A" class="contact-button-round">画像を提供する</a>
+        <a href="https://hokuriv.github.io/pref/" class="contact-button-round">県から選ぶ</a>
+        <a href="https://hokuriv.github.io/municipality/" class="contact-button-round">自治体から選ぶ</a>
+        <a href="https://hokuriv.github.io/river/" class="contact-button-round">河川から選ぶ</a>
+      </section>
+      <div class="spacer"></div>
+      <section>
+        <h2>最近のお知らせ・更新</h2>
+        <ul>
+          <li><span class="icon icon_2">重要</span><br>2025/11/30<br>サイトを作成しました。</li>
+        </ul>
+        <a href="https://hokuriv.github.io/history/" class="contact-button-round">すべてのお知らせを見る</a>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <p>Copyright © いゆかも工房 All rights reserved.</p>
+  </footer>
+
+  <script>
+    fetch('https://hokuriv.github.io/assets/json/menu.json')
+      .then(res => res.json())
+      .then(data => {
+        const menu = document.getElementById('menu');
+        const ul = document.createElement('ul');
+        data.forEach(item => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = item.link;
+          a.textContent = item.title;
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
+        menu.appendChild(ul);
+      });
+  </script>
+</body>
+</html>
